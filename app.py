@@ -23,4 +23,6 @@ def webhook():
         }
         events.insert(0, parsed_event)
     return '', 200
-  
+
+if __name__ == "__main__":
+    app.run(debug=True)
