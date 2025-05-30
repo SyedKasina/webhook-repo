@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webhook Events</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        .event { margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Webhook Events</h1>
+    {% for event in events %}
+    <div class="event">
+        <strong>Repo:</strong> {{ event.repo }}<br>
+        <strong>Pusher:</strong> {{ event.pusher }}<br>
+        <strong>Message:</strong> {{ event.message }}<br>
+        <strong>Type:</strong> {{ event.type }}<br>
+        <strong>Time:</strong> {{ event.timestamp }}
+    </div>
+    {% endfor %}
+</body>
+</html>
